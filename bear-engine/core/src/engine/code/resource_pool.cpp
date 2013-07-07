@@ -122,7 +122,7 @@ bool bear::engine::resource_pool::find_file_name_straight
       const std::string filepath =
         *it + boost::filesystem::slash<boost::filesystem::path>::value + name;
 #endif
-      const boost::filesystem::path path( filepath, boost::filesystem::native );
+      const boost::filesystem::path path( filepath);
 
       if ( boost::filesystem::exists( path ) )
         if ( !boost::filesystem::is_directory( path ) )
